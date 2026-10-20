@@ -1,0 +1,8 @@
+[build]
+  publish = "web"
+  command = ""
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
