@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>NiNi Homestay – Trị An</title>
+<link rel="stylesheet" href="style.css">
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+} }
+</script>
+</head>
+<body>
+<div id="app"></div>
+<div id="loading"><div class="box"><div class="title">NiNi Homestay</div><div id="loadtxt">Đang tải mô hình…</div><div class="bar"><i id="loadbar"></i></div></div></div>
+<header id="top">
+  <div class="brand">NiNi Homestay <span>Hồ Trị An · Đồng Nai</span></div>
+  <div class="modes"><button data-mode="khach" class="on">Tham quan</button><button data-mode="noibo">Nội bộ</button></div>
+</header>
+<section id="panel" class="hidden">
+  <div class="row"><label for="water">Mực nước hồ</label><b id="wval">61,6 m</b></div>
+  <input id="water" type="range" min="50" max="66" step="0.1" value="61.6">
+  <div class="ticks"><span>50 m<br><small>MN chết</small></span><span class="mark">62 m<br><small>MN dâng BT</small></span><span>66 m</span></div>
+  <div class="row small"><label><input type="checkbox" id="showBound" checked> Hiện ranh giới</label></div>
+  <div id="probe" class="small">Bấm vào mặt đất để xem cao độ.</div>
+</section>
+<footer id="hint">Kéo để xoay · Cuộn/chụm để phóng to · Chuột phải/2 ngón để dời</footer>
+<script type="module" src="main.js"></script>
+</body>
+</html>

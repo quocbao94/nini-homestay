@@ -1,0 +1,23 @@
+:root{--bg:rgba(18,24,22,.72);--fg:#f3f1ea;--acc:#e0b25c;--line:rgba(255,255,255,.14)}
+*{box-sizing:border-box}html,body{margin:0;height:100%;overflow:hidden;background:#9fb4c3;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--fg)}
+#app{position:fixed;inset:0}
+#top{position:fixed;top:12px;left:16px;right:16px;display:flex;justify-content:space-between;align-items:center;gap:12px;pointer-events:none}
+.brand{background:var(--bg);backdrop-filter:blur(8px);padding:8px 14px;border-radius:10px;font-weight:700;letter-spacing:.3px;pointer-events:auto}
+.brand span{display:block;font-weight:400;font-size:12px;opacity:.75}
+.modes{background:var(--bg);backdrop-filter:blur(8px);border-radius:10px;padding:4px;display:flex;gap:4px;pointer-events:auto}
+.modes button{border:0;background:transparent;color:var(--fg);padding:8px 12px;border-radius:7px;font:inherit;font-size:14px;cursor:pointer}
+.modes button.on{background:var(--acc);color:#1d1a12;font-weight:600}
+#panel{position:fixed;left:16px;bottom:44px;width:min(340px,calc(100% - 32px));background:var(--bg);backdrop-filter:blur(8px);border-radius:12px;padding:12px 14px;border:1px solid var(--line)}
+#panel.hidden{display:none}
+.row{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.row b{color:var(--acc);font-size:18px}
+input[type=range]{width:100%;accent-color:var(--acc)}
+.ticks{display:flex;justify-content:space-between;font-size:11px;opacity:.8;line-height:1.2;position:relative}
+.ticks .mark{position:absolute;left:75%;transform:translateX(-50%);text-align:center;color:var(--acc)}
+.small{font-size:13px;opacity:.9;margin-top:8px}
+#probe{border-top:1px solid var(--line);padding-top:8px;min-height:2.6em}
+#hint{position:fixed;bottom:10px;left:0;right:0;text-align:center;font-size:12px;opacity:.85;text-shadow:0 1px 3px #000;pointer-events:none;padding:0 16px}
+#loading{position:fixed;inset:0;display:grid;place-items:center;background:#1c2421;z-index:10;transition:opacity .6s}
+#loading .box{text-align:center;width:min(280px,80vw)}#loading .title{font-size:22px;font-weight:700;margin-bottom:6px}
+#loading .bar{height:4px;background:#ffffff22;border-radius:4px;margin-top:12px;overflow:hidden}#loading .bar i{display:block;height:100%;width:0;background:var(--acc);transition:width .2s}
+@media (max-width:560px){.brand span{display:none}.modes button{padding:7px 9px;font-size:13px}#hint{display:none}#panel{bottom:16px}}
