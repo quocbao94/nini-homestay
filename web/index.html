@@ -19,13 +19,29 @@
   <div class="brand">NiNi Homestay <span>Hồ Trị An · Đồng Nai</span></div>
   <div class="modes"><button data-mode="khach" class="on">Tham quan</button><button data-mode="noibo">Nội bộ</button></div>
 </header>
-<section id="panel" class="hidden">
-  <div class="row"><label for="water">Mực nước hồ</label><b id="wval">61,6 m</b></div>
-  <input id="water" type="range" min="50" max="66" step="0.1" value="61.6">
-  <div class="ticks"><span>50 m<br><small>MN chết</small></span><span class="mark">62 m<br><small>MN dâng BT</small></span><span>66 m</span></div>
-  <div class="row small"><label><input type="checkbox" id="showBound" checked> Hiện ranh giới</label></div>
-  <div id="probe" class="small">Bấm vào mặt đất để xem cao độ.</div>
+<section id="panel">
+  <div class="row"><label for="water">Mực nước hồ</label><span><b id="wval">61,6 m</b> <button id="play" title="Mô phỏng nước dâng/rút">▶</button> <button id="fold" title="Thu gọn">–</button></span></div>
+  <div id="pbody">
+  <input id="water" type="range" min="50" max="64" step="0.05" value="61.6">
+  <div class="presets"><button data-h="50">50 m<small>MN chết</small></button><button data-h="61.6">61,6 m<small>lúc chụp ảnh</small></button><button data-h="62">62 m<small>MN dâng BT</small></button><button data-h="63">63 m</button><button data-h="64">64 m</button></div>
+  <div id="nodata" class="warn hidden">Dưới 61,5 m chưa có dữ liệu đáy hồ – vùng lòng hồ hiển thị phẳng ở 61,5 m.</div>
+  <div id="flood" class="small"></div>
+  <div class="note">Cao độ địa hình lấy từ dữ liệu vệ tinh 30 m (sai số có thể vài mét) – dùng để tham khảo, cần đối chiếu cao độ đo thực tế.</div>
+  <div class="sect">
+    <div class="row small"><span>Kiểu nền</span><span class="style seg"><button data-style="lowpoly" class="on">Low-poly</button><button data-style="sat">Ảnh vệ tinh</button></span></div>
+    <div class="row small"><label for="exag">Phóng đại cao độ</label><b id="exagv" class="sm">×1,5</b></div>
+    <input id="exag" type="range" min="1" max="3" step="0.1" value="1.5">
+    <div class="row small"><label for="sunTime">Mặt trời</label><input id="sunDate" type="date"></div>
+    <input id="sunTime" type="range" min="5" max="19" step="0.25" value="8.5">
+    <div id="sunv" class="small sm2"></div>
+  </div>
+  <div class="noibo-only">
+    <div class="row small"><label><input type="checkbox" id="showBound" checked> Hiện ranh giới</label></div>
+    <div id="probe" class="small">Bấm vào mặt đất để xem cao độ.</div>
+  </div>
+  </div>
 </section>
+<div id="attr"></div>
 <footer id="hint">Kéo để xoay · Cuộn/chụm để phóng to · Chuột phải/2 ngón để dời</footer>
 <script type="module" src="main.js"></script>
 </body>

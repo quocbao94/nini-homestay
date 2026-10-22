@@ -1,2 +1,5 @@
 *.blend1
 *.blend@
+.netlify_token
+scripts/.cache/
+.opentopo_key

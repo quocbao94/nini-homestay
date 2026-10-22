@@ -1,0 +1,22 @@
+{
+  "_ghi_chu": "Cau hinh sinh boi canh 3D. Chay: python3 scripts/fetch_context.py",
+  "center_latlon": [11.171200, 107.092400],
+  "origin_utm48n": [728496, 1235724],
+  "radius_km": 1.5,
+  "dem": { "source": "copernicus", "zoom": 14, "grid_spacing_m": 10, "_nguon": "copernicus | aws-terrarium; key OpenTopography doc tu ../.opentopo_key hoac bien OPENTOPO_KEY" },
+  "vertical_exaggeration": 1.5,
+  "water": { "min": 50.0, "max": 66.0, "default": 61.6, "normal_full": 62.0, "dead": 50.0 },
+  "sun": { "date": "2026-10-21", "time": "08:30", "tz_offset_h": 7 },
+  "core_polygon_latlon": [
+    [11.17186344436427, 107.09264278030376],
+    [11.171572423180395, 107.09344339550951],
+    [11.169712227909182, 107.09271939450174],
+    [11.169612234625777, 107.09198446923847],
+    [11.17076478669679, 107.09131391699093],
+    [11.172074448554136, 107.09160752117542],
+    [11.17173236891116, 107.09239609061852]
+  ],
+  "core_buffer_m": 15,
+  "overpass_url": "https://overpass-api.de/api/interpreter",
+  "user_agent": "NiNiHomestay-context/1.0 (github.com/quocbao94/nini-homestay)"
+}
